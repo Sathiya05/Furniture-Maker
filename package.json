@@ -3,12 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "footer.js",
- "scripts": {
-  "build": "node node_modules/tailwindcss/lib/cli.js -i ./input.css -o ./output.css"
-,
-  "dev": "npx tailwindcss -i ./input.css -o ./output.css --watch"
-},
-
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tailwindcss -i ./style.css -o ./output.css",
+    "dev": "tailwindcss -i ./style.css -o ./output.css --watch"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Sathiya05/Furniture-Maker.git"
