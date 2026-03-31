@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Start Commission | TimberCraft</title>
+
+  <link rel="stylesheet" href="dist/output.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="images\growwpark_logo.webp">
+
+
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&display=swap');
+
+    /* Prevents overall page scroll */
+    body {
+      overflow: hidden;
+    }
+
+    * {
+      transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* RTL Support */
+    html[dir="rtl"] .lg\:flex-row {
+      flex-direction: row-reverse;
+    }
+
+    /* Increased Height for No-Scroll */
+    @media (min-width: 1024px) {
+      #main-card {
+        height: 1000px;
+      }
+    }
+
+    .global-toggles {
+      position: fixed;
+      top: 1.5rem;
+      right: 1.5rem;
+      z-index: 100;
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    .toggle-btn {
+      width: 2.75rem;
+      height: 2.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(166, 110, 56, 0.2);
+      border-radius: 9999px;
+      backdrop-filter: blur(4px);
+    }
+
+    .dark .toggle-btn {
+      background-color: #2A2A2A;
+      border-color: rgba(166, 110, 56, 0.2);
+    }
+
+    .toggle-btn i {
+      color: #A66E38;
+    }
+
+    /* Custom Button Style */
+    .btn-wood {
+      background-color: #A66E38;
+      border: 2px solid #000;
+      transition: all 0.3s ease;
+    }
+
+    .btn-wood:hover {
+      background-color: #000;
+      color: #fff;
+    }
+
+    @media(max-height: 1000px) {
+      #main-card {
+        transform: scale(0.85);
+      }
+    }
+
+    @media(max-width:420px) {
+      .last {
+        display: none !important;
+      }
+    }
+
+    @media(max-width:1024px) {
+      #main-card {
+        margin-top: 70px !important;
+      }
+    }
+  </style>
+</head>
+
+<body
+  class="antialiased h-screen flex items-center justify-center p-4 bg-[#FDF8F4] dark:bg-[#0A0A0A] transition-colors duration-500 text-studio dark:text-white relative">
+
+  <div class="global-toggles">
+    <button id="rtl-toggle" class="toggle-btn" aria-label="Toggle RTL"><i class="fas fa-exchange-alt"></i></button>
+    <button id="theme-toggle" class="toggle-btn" aria-label="Toggle theme"><i id="theme-icon"
+        class="fas fa-moon"></i></button>
+  </div>
+
+  <div id="main-card"
+    class="w-full max-w-6xl max-h-[105vh] rounded-3xl overflow-hidden relative bg-white dark:bg-[#111111] border border-gray-100 dark:border-gray-800 shadow-2xl flex flex-col lg:flex-row z-10">
+
+    <div id="signup-panel"
+      class="w-full lg:w-1/2 p-6 sm:p-10 flex flex-col justify-center items-center overflow-hidden text-center">
+
+      <div class="w-full max-w-sm">
+        <div class="logo flex justify-center mb-6">
+          <a href="index.html" class="flex items-center space-x-2 rtl:space-x-reverse group">
+            <i class="fas fa-tree text-xl text-wood transition-transform duration-300 group-hover:scale-110"></i>
+            <span class="text-xl font-extrabold tracking-tight uppercase dark:text-white text-black">
+              Timber<span class="text-wood">Craft</span>
+            </span>
+          </a>
+        </div>
+
+        <h2 class="text-2xl sm:text-3xl font-serif font-bold text-studio dark:text-white mb-2">Become a Patron</h2>
+        <p class="text-studio/70 dark:text-white/70 mb-8 text-base font-medium mx-auto max-w-xs">Join our studio to begin your journey.</p>
+
+        <form class="space-y-6 w-full text-left">
+          <div class="space-y-4">
+            <div>
+              <label class="text-sm uppercase tracking-widest font-bold text-gray-700 dark:text-gray-300 mb-2 block">Full Name</label>
+              <input type="text" placeholder="John Doe"
+                class="w-full px-4 py-3 border rounded-xl bg-[#FDF8F4] dark:bg-[#1A1A1A] border-gray-100 dark:border-gray-800 text-studio dark:text-white focus:outline-none focus:ring-2 focus:ring-wood transition-all text-sm">
+            </div>
+
+
+            <div class="relative group/pass">
+              <label class="text-sm uppercase tracking-widest font-bold text-gray-700 dark:text-gray-300 mb-2 block">Password</label>
+              <div class="relative">
+                <input type="password" id="password" placeholder="········"
+                  class="w-full px-4 py-3 border rounded-xl bg-[#FDF8F4] dark:bg-[#1A1A1A] border-gray-100 dark:border-gray-800 text-studio dark:text-white focus:outline-none focus:ring-2 focus:ring-wood transition-all text-sm pr-10">
+                <button type="button" onclick="togglePassword('password', this)" 
+                  class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-wood dark:text-gray-500 dark:hover:text-wood transition-colors focus:outline-none">
+                  <i class="far fa-eye text-xs"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="relative group/pass">
+              <label class="text-sm uppercase tracking-widest font-bold text-gray-700 dark:text-gray-300 mb-2 block">Confirm Password</label>
+              <div class="relative">
+                <input type="password" id="confirm-password" placeholder="········"
+                  class="w-full px-4 py-3 border rounded-xl bg-[#FDF8F4] dark:bg-[#1A1A1A] border-gray-100 dark:border-gray-800 text-studio dark:text-white focus:outline-none focus:ring-2 focus:ring-wood transition-all text-sm pr-10">
+                <button type="button" onclick="togglePassword('confirm-password', this)" 
+                  class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-wood dark:text-gray-500 dark:hover:text-wood transition-colors focus:outline-none">
+                  <i class="far fa-eye text-xs"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Restored Correct Alignment for Checkbox -->
+          <div class="flex items-center gap-2 py-2">
+            <input type="checkbox" id="terms" class="accent-wood w-4 h-4 rounded cursor-pointer">
+            <label for="terms" class="text-xs text-gray-700 dark:text-gray-300 leading-none uppercase tracking-widest font-medium cursor-pointer">
+              I agree to the <a href="#" class="text-wood font-black hover:underline">Terms</a> & <a href="#"
+                class="text-wood font-black hover:underline">Privacy</a>
+            </label>
+          </div>
+
+          <button
+            class="btn-wood w-full bg-wood text-white py-4 font-bold uppercase tracking-widest text-sm transition-all duration-300">
+            Sign Up
+          </button>
+
+          <div class="relative my-8">
+            <div class="border-t border-gray-100 dark:border-gray-800"></div>
+            <span
+              class="absolute left-1/2 -translate-x-1/2 -top-3 bg-white dark:bg-[#111] px-4 text-gray-500 text-xs font-bold uppercase tracking-widest">or
+              register</span>
+          </div>
+
+          <div class="flex gap-4">
+            <button type="button"
+              class="flex-1 flex items-center justify-center gap-2 border border-gray-100 dark:border-gray-800 hover:border-wood py-3.5 rounded-xl text-xs font-bold uppercase tracking-widest transition">
+              <i class="fab fa-google text-wood text-sm"></i> Google
+            </button>
+            <button type="button"
+              class="flex-1 flex items-center justify-center gap-2 border border-gray-100 dark:border-gray-800 hover:border-wood py-3.5 rounded-xl text-xs font-bold uppercase tracking-widest transition">
+              <i class="fab fa-apple text-wood text-sm"></i> Apple
+            </button>
+          </div>
+
+          <p class="text-center text-gray-700 pt-6 text-base font-medium">
+            Already a patron? <a href="login.html" class="text-wood font-black hover:underline">Log in here</a>
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <div class="promo-side hidden lg:flex w-1/2 relative overflow-hidden flex-col justify-end p-10">
+      <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1540638349517-3abd5afc5847?q=80&w=1974&auto=format&fit=crop"
+          alt="Workshop" class="w-full h-full object-cover grayscale-[20%]">
+        <div class="absolute inset-0 bg-gradient-to-t from-studio via-studio/70 to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 text-white">
+        <div class="inline-block px-3 py-1 rounded-full border border-wood/40 bg-studio/50 backdrop-blur-sm mb-4">
+          <span class="text-xs font-bold tracking-[0.25em] uppercase text-wood"><i
+              class="fas fa-hammer mr-2"></i>Design Consultation</span>
+        </div>
+        <h3 class="text-3xl md:text-4xl font-serif font-bold mb-4 leading-tight">Your Vision, <br>Our Craftsmanship.
+        </h3>
+        <div class="space-y-3 text-sm mb-6 text-white/80">
+          <p class="flex items-center gap-2"><i class="fas fa-check text-wood text-[10px]"></i><span>Collaborate with
+              master builders</span></p>
+          <p class="flex items-center gap-2"><i class="fas fa-check text-wood text-[10px]"></i><span>Access domestic &
+              exotic wood library</span></p>
+          <p class="flex items-center gap-2"><i class="fas fa-check text-wood text-[10px]"></i><span>Private 3D design
+              mockups</span></p>
+        </div>
+        <div
+          class="bg-white/5 backdrop-blur-md inline-flex items-center px-4 py-2.5 rounded-full border border-white/10">
+          <span class="text-xs font-bold uppercase tracking-widest font-serif">A tradition of excellence since
+            1998</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const themeToggle = document.getElementById("theme-toggle");
+    const themeIcon = document.getElementById("theme-icon");
+    const rtlToggle = document.getElementById("rtl-toggle");
+    const htmlElement = document.documentElement;
+
+    themeToggle.addEventListener("click", () => {
+      const isDark = htmlElement.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      themeIcon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+    });
+
+    rtlToggle.addEventListener("click", () => {
+      const currentDir = htmlElement.getAttribute("dir") === "rtl" ? "ltr" : "rtl";
+      htmlElement.setAttribute("dir", currentDir);
+    });
+
+    (function init() {
+      if (localStorage.getItem('theme') === 'dark') {
+        htmlElement.classList.add('dark');
+        themeIcon.className = 'fas fa-sun';
+      }
+    })();
+
+    function togglePassword(inputId, button) {
+      const input = document.getElementById(inputId);
+      const icon = button.querySelector('i');
+      
+      if (input.type === 'password') {
+        input.type = 'text';
+        icon.classList.remove('fa-eye');
+        icon.classList.add('fa-eye-slash');
+      } else {
+        input.type = 'password';
+        icon.classList.remove('fa-eye-slash');
+        icon.classList.add('fa-eye');
+      }
+    }
+  </script>
+</body>
+
+</html>

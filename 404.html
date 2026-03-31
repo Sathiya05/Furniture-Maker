@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - The Missing Piece</title>
+    <link rel="icon" href="images\growwpark_logo.webp">
+
+    <link rel="stylesheet" href="dist/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+
+    <style>
+        /* Floating animation for the frame */
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(12deg); }
+            50% { transform: translateY(-15px) rotate(12deg); }
+            100% { transform: translateY(0px) rotate(12deg); }
+        }
+
+        /* Sawing motion for the tool icon */
+        @keyframes saw {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(10px); }
+        }
+
+        .animate-float { animation: float 5s ease-in-out infinite; }
+        .animate-saw { animation: saw 2s ease-in-out infinite; }
+        
+        .fade-in {
+            animation: fadeIn 1.2s ease forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+
+<body class="bg-white transition duration-300 overflow-x-hidden">
+
+    <section class="relative min-h-screen flex items-center justify-center px-6 py-12">
+        
+        <div class="absolute top-0 left-0 w-full h-2 bg-oak"></div>
+
+        <div class="relative z-10 text-center max-w-2xl w-full fade-in">
+
+            <div class="relative w-24 h-24 sm:w-28 sm:h-28 mx-auto mb-8 flex items-center justify-center">
+                <div class="absolute inset-0 border-2 border-oak rounded-sm rotate-12 opacity-40 animate-float"></div>
+                
+                <div class="w-16 h-16 sm:w-20 sm:h-20 bg-black text-white flex items-center justify-center shadow-2xl z-10">
+                    <i class="fas fa-pencil-ruler text-2xl sm:text-3xl"></i>
+                </div>
+                
+                <div class="absolute -bottom-2 -right-2 text-oak animate-saw">
+                    <i class="fas fa-compass text-2xl sm:text-3xl"></i>
+                </div>
+            </div>
+
+            <h1 class="text-7xl md:text-8xl lg:text-9xl font-black text-black mb-2 tracking-tighter leading-none">
+                404
+            </h1>
+
+            <div class="w-12 h-1 bg-oak mx-auto mb-6"></div>
+
+            <h2 class="text-xl sm:text-3xl font-bold text-gray-900 mb-4 uppercase tracking-[0.2em]">
+                The Missing Piece
+            </h2>
+
+            <p class="text-gray-500 text-sm sm:text-base mb-10 font-light max-w-xs sm:max-w-md mx-auto leading-relaxed">
+                This page wasn't in the original blueprints. It seems we've strayed from the workshop floor into uncharted territory.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+                <a href="index.html"
+                   class="w-full sm:w-auto px-10 py-4 bg-oak hover:bg-black text-white font-bold tracking-widest uppercase text-[10px] sm:text-xs transition duration-500 shadow-lg">
+                    Back to Home
+                </a>
+
+                <a href="contact.html"
+                   class="w-full sm:w-auto px-10 py-4 border border-black text-black hover:bg-black hover:text-white font-bold tracking-widest uppercase text-[10px] sm:text-xs transition duration-500">
+                    Start a Project
+                </a>
+            </div>
+
+            <div class="mt-16 sm:mt-24 opacity-40">
+                <p class="text-[9px] sm:text-[10px] tracking-[0.6em] text-black uppercase font-bold">
+                    Precision • Quality • Timber
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+    </body>
+</html>
