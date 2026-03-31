@@ -4,16 +4,25 @@
   "description": "",
   "main": "footer.js",
   "scripts": {
-    "build": "tailwindcss -i ./style.css -o ./dist/output.css",
-    "watch": "tailwindcss -i ./style.css -o ./dist/output.css --watch"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tailwindcss -i ./input.css -o ./output.css",
+    "dev": "tailwindcss -i ./input.css -o ./output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sathiya05/Furniture-Maker.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Sathiya05/Furniture-Maker/issues"
+  },
+  "homepage": "https://github.com/Sathiya05/Furniture-Maker#readme",
   "devDependencies": {
     "autoprefixer": "^10.4.27",
     "postcss": "^8.5.8",
-    "tailwindcss": "^3.4.19"
+    "tailwindcss": "^3.4.1"
   }
 }
