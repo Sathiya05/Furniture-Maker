@@ -4,7 +4,8 @@
   "description": "",
   "main": "footer.js",
  "scripts": {
-  "build": "npx tailwindcss -i ./input.css -o ./output.css",
+  "build": "node node_modules/tailwindcss/lib/cli.js -i ./input.css -o ./output.css"
+,
   "dev": "npx tailwindcss -i ./input.css -o ./output.css --watch"
 },
 
